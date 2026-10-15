@@ -32,77 +32,30 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## Table of Contents
 
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
 - [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
 - [Open-Source GitHub Projects](#open-source-github-projects)
-
 - [How to Contribute](#how-to-contribute)
-
 - [Disclaimer](#disclaimer)
 
+## Sector Overview & Market Dynamics
 
+The global Desktop-as-a-Service (DaaS) and cloud virtual desktop market is estimated at **$6B–$9.5B in 2024–2025** and projected to reach **$22B–$50B by the mid-2030s** (growing at a 13%–18.5% CAGR). While the broader ecosystem is **moderately fragmented** across regional MSPs, browser-streaming startups, and specialized VDI providers, high-end enterprise infrastructure is **highly concentrated** among an oligopoly of hyperscalers and incumbent enterprise virtualization leaders (Microsoft, AWS, Citrix, and VMware/Omnissa).
 
 ## SaaS/Hosted Platforms
 
-
-
-- **[Windows 365](https://www.microsoft.com/en-us/windows-365)**  
-
-  Microsoft's Cloud PC service delivering full Windows desktops to any device via browser or Remote Desktop app. Integrated with Intune for management and Entra ID for identity.
-
-
-
-- **[Amazon WorkSpaces](https://aws.amazon.com/workspaces/)**  
-
-  Fully managed desktop-as-a-service (DaaS) on AWS. Features Windows and Linux desktops, WorkSpaces Web for browser-based access, and WorkSpaces Core for third-party VDI management.
-
-
-
-- **[Citrix Workspace](https://www.citrix.com/)**  
-
-  Enterprise workspace platform delivering virtual apps and desktops. Features Citrix DaaS, HDX protocol for optimized performance, and zero-trust access controls.
-
-
-
-- **[VMware Horizon](https://www.vmware.com/products/horizon.html)**  
-
-  Virtual desktop and app delivery platform. Features Horizon Cloud on Azure, App Volumes, and Dynamic Environment Manager for personalized workspaces.
-
-
-
-- **[Paperspace](https://www.paperspace.com/)**  
-
-  Cloud computing platform with GPU-accelerated virtual desktops. Features Gradient for ML workloads and Core for virtual machines. Acquired by DigitalOcean.
-
-
-
-- **[Azure Virtual Desktop](https://azure.microsoft.com/en-us/products/virtual-desktop/)**  
-
-  Microsoft's cloud VDI service with multi-session Windows 10/11, FSLogix profile management, and App Attach for MSIX packaging.
-
-
-
-- **[Shadow PC](https://shadow.tech/)**  
-
-  Cloud gaming and productivity desktop streaming. Features high-end GPU access, low-latency streaming, and support for multiple devices.
-
-
-
-- **[Shells](https://shells.com/)**  
-
-  Personal cloud desktop provider. Features browser-based access, persistent storage, and Linux/Windows environments.
-
-
-
-- **[Neverinstall](https://neverinstall.com/)**  
-
-  Cloud application streaming platform. Runs desktop apps in the cloud and streams them to any browser without local installation.
-
-
-
-- **[Kasm Cloud](https://kasm.com/)**  
-
-  Managed version of Kasm Workspaces. Streams containerized browsers, desktops, and applications via web browser with SOC 2 Type II attestation .
+| Platform | Company Size (Valuation / Revenue) | Pricing | Free Tier / Trial Limits | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Windows 365](https://www.microsoft.com/en-us/windows-365)** | ~$3.1T Market Cap / ~$245B Annual Revenue (Microsoft) | From $28.00/user/mo (Enterprise) or $36.00/user/mo (Business, 2 vCPU/8GB RAM/128GB) | 30-day free trial; 1 Cloud PC per tenant (2 vCPU, 8 GB RAM, 128 GB storage) | Microsoft's Cloud PC delivering streamed Windows desktops to any device with Intune and Entra ID integration. |
+| **[Azure Virtual Desktop](https://azure.microsoft.com/en-us/products/virtual-desktop/)** | ~$3.1T Market Cap / ~$245B Annual Revenue (Microsoft) | From $5.50–$10.00/user/mo external access + Azure VM infrastructure (pooled multi-session from ~$10/user/mo) | 30-day trial with $200 Azure credits; includes 12 months of select free services (VM compute consumes credits) | Microsoft cloud VDI with multi-session Windows 10/11, FSLogix profile containers, and MSIX app attach. |
+| **[Amazon WorkSpaces](https://aws.amazon.com/workspaces/)** | ~$2.0T Market Cap / ~$105B AWS Revenue Run-rate (Amazon) | From $7.25/mo + $0.22/hr (metered) or flat $21.00/user/mo (Value tier, 1 vCPU/2GB RAM/80GB root) | 3-month free trial; up to 2 Standard AutoStop WorkSpaces with 40 combined usage hours/month, 80GB root + 50GB user volumes | Fully managed desktop-as-a-service on AWS with Windows, Amazon Linux, and Ubuntu desktop streaming. |
+| **[VMware Horizon](https://www.vmware.com/products/horizon.html)** | $4.0B Acquisition by KKR (Omnissa / ex-VMware EUC) | From $9.00–$12.50/user/mo (Horizon Cloud control plane license; underlying cloud VM compute billed separately) | 30-day to 60-day free trial for Horizon Cloud Service (accessible via Azure/AWS marketplace evaluation) | Enterprise virtual desktop and application streaming platform featuring App Volumes and Blast Extreme protocol. |
+| **[Citrix Workspace](https://www.citrix.com/)** | $16.5B Take-Private Acquisition (Cloud Software Group) | From $10.00/user/mo (Citrix DaaS Standard; minimum user commitments and cloud VM compute apply) | 7-day guided trial via Azure Marketplace, or 30-day custom enterprise Proof-of-Concept (PoC) | Enterprise digital workspace delivering virtual apps and desktops with HDX protocol and zero-trust security. |
+| **[Paperspace](https://www.paperspace.com/)** | $111M Acquisition by DigitalOcean (~$3.5B Market Cap) | From $0.07/hr or $8.00/mo (CPU/GPU Core desktops) + $5.00/mo storage | Free tier for Gradient Notebooks (5 GB persistent storage, 1 concurrent instance, 6-hr session timeout; no free Core VDI) | Cloud GPU and CPU virtual machines and desktop streaming tailored for machine learning and development. |
+| **[Shadow PC](https://shadow.tech/)** | ~$30M–$50M Est. Valuation (€2M debt-clearing acquisition + ongoing funding by Octave Klaba / Synfonium) | From $29.99/mo (Neo Lite: 16GB RAM, RTX 2000 Ada tier, 120 hrs/mo cap) | No free trial or free tier; introductory promotional discounts offered periodically (no partial refunds) | High-performance Windows cloud PC streaming dedicated RTX GPUs at up to 4K/5K resolution for gaming and pro workloads. |
+| **[Kasm Cloud](https://kasm.com/)** | ~$2.8M Annual Recurring Revenue (Kasm Technologies, private) | From $5.00/user/mo (Personal Cloud) or $19.00/user/yr (Enterprise license self-hosted) | Free Community Edition (self-hosted: 5 concurrent sessions forever, community support); Cloud Personal free slots vary | Managed containerized desktop, browser isolation, and app streaming delivered via browser with SOC 2 compliance. |
+| **[Neverinstall](https://neverinstall.com/)** | ~$5M–$15M Est. Seed Valuation (~$1.5M Venture Funding Raised) | From $15.00/mo (Basic plan) or $50.00/mo (Premium plan) | Free forever plan with 1-hour session limit per launch (basic compute, resets between sessions) | Cloud application and desktop streaming platform executing applications directly inside web browsers. |
+| **[Shells](https://shells.com/)** | Privately Held / Seed stage (E Shells, Inc.) | From $4.95/mo (Lite: 1 vCPU, 2GB RAM, 40GB storage, 10 hrs/mo) or $11.95/mo (Basic unlimited) | No free tier; 7-day money-back guarantee on all plans to test risk-free | Personal and small-business cloud computer streaming accessible from any web browser or mobile client. |
 
 
 
