@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.05" />
+    </linearGradient>
+
+    <filter id="blurFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="40" />
+    </filter>
+
+    <filter id="cardGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      .cyber-grid {
+        stroke: #334155;
+        stroke-opacity: 0.15;
+        stroke-width: 1;
+      }
+      .stream-wave {
+        fill: none;
+        stroke-linecap: round;
+        opacity: 0.45;
+      }
+      .wave1 {
+        stroke: url(#accentGrad);
+        stroke-width: 2.5;
+        animation: pulseWave 6s ease-in-out infinite alternate;
+      }
+      .wave2 {
+        stroke: #38bdf8;
+        stroke-width: 1.5;
+        stroke-dasharray: 6 8;
+        animation: floatDash 20s linear infinite;
+      }
+      .floating-node {
+        animation: floatOrb 5s ease-in-out infinite alternate;
+      }
+      .pulse-pill {
+        animation: pillPulse 3s ease-in-out infinite alternate;
+      }
+      @keyframes floatDash {
+        to { stroke-dashoffset: -200; }
+      }
+      @keyframes pulseWave {
+        0% { opacity: 0.25; transform: translateY(0px) scaleY(1); }
+        100% { opacity: 0.55; transform: translateY(-8px) scaleY(1.04); }
+      }
+      @keyframes floatOrb {
+        0% { transform: translateY(0px) scale(1); }
+        100% { transform: translateY(-12px) scale(1.08); }
+      }
+      @keyframes pillPulse {
+        0% { transform: translateY(0px); opacity: 0.85; }
+        100% { transform: translateY(-4px); opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGradient)" />
+
+  <!-- Ambient Dynamic Lighting Blobs (Background Layer) -->
+  <g filter="url(#blurFilter)">
+    <circle cx="200" cy="100" r="140" fill="#38bdf8" opacity="0.18" class="floating-node" />
+    <circle cx="1000" cy="240" r="160" fill="#a855f7" opacity="0.18" class="floating-node" style="animation-delay: -2.5s;" />
+    <circle cx="600" cy="300" r="110" fill="#6366f1" opacity="0.12" />
+  </g>
+
+  <!-- Dynamic Flow Lines & Mesh (Background Layer) -->
+  <g>
+    <path class="stream-wave wave1" d="M -50 280 Q 250 180, 550 260 T 1250 190" />
+    <path class="stream-wave wave2" d="M -50 220 Q 350 320, 700 210 T 1250 270" />
+    <path class="stream-wave" stroke="#818cf8" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="4 6" d="M -50 140 Q 300 240, 650 150 T 1250 180" />
+  </g>
+
+  <!-- Ambient Perspective Grid Lines (Behind content) -->
+  <g class="cyber-grid">
+    <line x1="100" y1="0" x2="100" y2="360" />
+    <line x1="300" y1="0" x2="300" y2="360" />
+    <line x1="500" y1="0" x2="500" y2="360" />
+    <line x1="700" y1="0" x2="700" y2="360" />
+    <line x1="900" y1="0" x2="900" y2="360" />
+    <line x1="1100" y1="0" x2="1100" y2="360" />
+    <line x1="0" y1="80" x2="1200" y2="80" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="280" x2="1200" y2="280" />
+  </g>
+
+  <!-- Animated Background Tech Nodes -->
+  <g class="floating-node" style="animation-delay: -1s;">
+    <circle cx="160" cy="70" r="4" fill="#38bdf8" opacity="0.6" />
+    <line x1="160" y1="70" x2="220" y2="110" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="2 3" />
+    <circle cx="220" cy="110" r="3" fill="#818cf8" opacity="0.6" />
+  </g>
+  <g class="floating-node" style="animation-delay: -3s;">
+    <circle cx="1060" cy="90" r="4" fill="#c084fc" opacity="0.6" />
+    <line x1="1060" y1="90" x2="980" y2="130" stroke="#c084fc" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="2 3" />
+    <circle cx="980" cy="130" r="3" fill="#38bdf8" opacity="0.6" />
+  </g>
+
+  <!-- FOREGROUND CONTENT: Header Pill, Title, Subtitle, Badges (Crisp, High-Contrast, Guaranteed Clear) -->
+
+  <!-- Top Category Pill -->
+  <g class="pulse-pill">
+    <rect x="425" y="32" width="350" height="32" rx="16" fill="#1e293b" fill-opacity="0.85" stroke="url(#accentGrad)" stroke-width="1.2" />
+    <circle cx="445" cy="48" r="4" fill="#38bdf8">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="460" y="53" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#38bdf8" letter-spacing="1.5">AI DESKTOPS &amp; CLOUD WORKSPACES</text>
+  </g>
+
+  <!-- Main Hero Title -->
+  <text x="600" y="132" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="44" font-weight="800" fill="url(#textGrad)" letter-spacing="-0.5">
+    Awesome AI Desktop Environments
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="172" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="400" fill="#94a3b8" letter-spacing="0.3">
+    Curated Hub of Cloud Desktops, Remote Workspace Streaming &amp; AI-Native Agent Shells
+  </text>
+
+  <!-- Feature Badge Strip / Key Pillars in Foreground -->
+  <g transform="translate(190, 215)">
+    <!-- Pill 1: Cloud Desktops / DaaS -->
+    <g class="pulse-pill" style="animation-delay: 0s;">
+      <rect x="0" y="0" width="180" height="42" rx="10" fill="#0f172a" fill-opacity="0.9" stroke="#334155" stroke-width="1.2" />
+      <text x="90" y="26" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">
+        ☁️ Cloud Desktops &amp; DaaS
+      </text>
+    </g>
+
+    <!-- Pill 2: Secure Streaming -->
+    <g class="pulse-pill" style="animation-delay: 0.5s;">
+      <rect x="210" y="0" width="190" height="42" rx="10" fill="#0f172a" fill-opacity="0.9" stroke="#334155" stroke-width="1.2" />
+      <text x="305" y="26" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">
+        🔒 Zero-Trust Streaming
+      </text>
+    </g>
+
+    <!-- Pill 3: AI-Native Harnesses -->
+    <g class="pulse-pill" style="animation-delay: 1.0s;">
+      <rect x="430" y="0" width="180" height="42" rx="10" fill="#0f172a" fill-opacity="0.9" stroke="#334155" stroke-width="1.2" />
+      <text x="520" y="26" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">
+        🤖 AI Agent Runtimes
+      </text>
+    </g>
+
+    <!-- Pill 4: Open Source VDI -->
+    <g class="pulse-pill" style="animation-delay: 1.5s;">
+      <rect x="640" y="0" width="180" height="42" rx="10" fill="#0f172a" fill-opacity="0.9" stroke="#334155" stroke-width="1.2" />
+      <text x="730" y="26" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">
+        ⚡ Open Source VDI
+      </text>
+    </g>
+  </g>
+
+  <!-- Sub-Footer Tech Specs Indicator -->
+  <g transform="translate(360, 295)">
+    <text x="240" y="16" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace" font-size="11.5" font-weight="500" fill="#64748b" letter-spacing="1.2">
+      WEBRTC • WEBSOCKETS • VNC • RDP • DOCKER WORKSPACES • GPU ACCELERATION
+    </text>
+  </g>
+
+  <!-- Outer Accent Border -->
+  <rect x="1" y="1" width="1198" height="358" rx="15" fill="none" stroke="url(#accentGrad)" stroke-width="1.2" stroke-opacity="0.4" />
+</svg>
